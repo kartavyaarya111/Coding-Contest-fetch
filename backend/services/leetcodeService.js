@@ -3,7 +3,7 @@ const axios = require("axios");
 async function getLeetCodeContests() {
   const query = `
     query {
-      upcomingContests {
+      allContests {
         title
         titleSlug
         startTime
@@ -18,12 +18,14 @@ async function getLeetCodeContests() {
     {
       headers: {
         "Content-Type": "application/json",
+        "User-Agent": "Mozilla/5.0",
       },
     }
   );
 
-  const contests = response.data.data.upcomingContests;
+  const contests = response.data.data.allContests;
   const now = Math.floor(Date.now() / 1000);
+  const oneMonthAgo = now - (30 * 24 * 60 * 60);
 
   const formattedContests = contests.map((contest) => ({
     ...contest,
@@ -38,6 +40,7 @@ async function getLeetCodeContests() {
   return {
     live: formattedContests.filter((contest) => contest.isLive),
     upcoming: formattedContests.filter((contest) => contest.startTime > now),
+    past: formattedContests.filter((contest) => contest.endTime < now && contest.endTime > oneMonthAgo),
   };
 }
 

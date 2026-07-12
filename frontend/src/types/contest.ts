@@ -10,4 +10,5 @@ export interface Contest {
 export interface ContestGroup {
   live: Contest[];
   upcoming: Contest[];
+  past:  Contest[];
 }

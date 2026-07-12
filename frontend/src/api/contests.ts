@@ -3,6 +3,7 @@ import type { ContestGroup } from "../types/contest";
 const emptyContestGroup: ContestGroup = {
   live: [],
   upcoming: [],
+  past: [],
 };
 
 export async function fetchPlatformContests(

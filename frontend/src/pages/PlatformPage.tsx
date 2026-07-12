@@ -14,6 +14,7 @@ function PlatformPage({
   const [contests, setContests] = useState<ContestGroup>({
     live: [],
     upcoming: [],
+    past: [],
   });
 
   const platform = platforms.find((item) => item.id === platformId);
@@ -49,6 +50,11 @@ function PlatformPage({
       <ContestSection
         title={`Upcoming ${platform?.name ?? ""} Contests`}
         contests={contests.upcoming}
+      />
+
+      <ContestSection
+        title={`Past ${platform?.name ?? ""} Contests`}
+        contests={contests.past}
       />
     </main>
   );
