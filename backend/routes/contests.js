@@ -2,7 +2,7 @@ const express = require("express");
 const { getLeetCodeContests } = require("../services/leetcodeService");
 const { getCodeChefContests } = require("../services/codechefService");
 const { getCodeforcesContests } = require("../services/codeforcesService");
-console.log("codeforces service loaded as:", typeof getCodeforcesContests);
+const { getHackerRankContests } = require("../services/hackerrankService");
 const router = express.Router();
 
 const handleRequest = (service) => async (req,res) => {
@@ -23,5 +23,7 @@ router.get("/leetcode", handleRequest(getLeetCodeContests));
 router.get("/codechef", handleRequest(getCodeChefContests));
 
 router.get("/codeforces", handleRequest(getCodeforcesContests));
+
+router.get("/hackerrank", handleRequest(getHackerRankContests));
 
 module.exports = router;
