@@ -16,4 +16,9 @@ export const platforms: Platform[] = [
     name: "CodeChef",
     description: "Starters and long-form contests",
   },
+  {
+    id: "hackerrank",
+    name: "HackerRank",
+    description: "Coding contests and hiring hackathons on HackerRank",
+  },
 ];

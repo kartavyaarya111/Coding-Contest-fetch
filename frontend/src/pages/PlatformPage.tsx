@@ -53,7 +53,7 @@ function PlatformPage({
       />
 
       <ContestSection
-        title={`Past ${platform?.name ?? ""} Contests`}
+        title={`Past ${platform?.name ?? ""} Contests [Last 30 Days]`}
         contests={contests.past}
       />
     </main>
