@@ -6,8 +6,7 @@ async function getCodeforcesContests() {
             "https://codeforces.com/api/contest.list",
             { headers: { "User-Agent": "Mozilla/5.0" }, timeout: 10000 }
         );
-        console.log(response.status, response.data.status, response.data.comment);
-
+        
         if (response.data.status !== "OK"){
             throw new Error("Failed to pull data from Codeforces gateway");
         }
