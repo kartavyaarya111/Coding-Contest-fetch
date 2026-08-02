@@ -12,7 +12,7 @@ function ContestSection({
     <section className="mt-10">
       <h2 className="text-2xl font-semibold text-white">{title}</h2>
 
-      <div className="mt-4 grid gap-4">
+      <div className="mt-4 grid gap-4 md:grid-cols-2">
         {contests.length > 0 ? (
           contests.map((contest) => (
             <ContestCard key={contest.titleSlug} contest={contest} />

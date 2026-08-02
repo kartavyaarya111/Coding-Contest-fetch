@@ -38,7 +38,7 @@ function PlatformPage({
         Back
       </button>
 
-      <h1 className="mt-8 text-4xl font-bold text-white sm:text-5xl">
+      <h1 className="mt-8 text-4xl font-bold text-white text-center sm:text-5xl">
         {platform?.name ?? "Platform"} Contests
       </h1>
 
