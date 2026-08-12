@@ -2,7 +2,7 @@ import type { Contest } from "../types/contest";
 
 function ContestCard({ contest }: { contest: Contest }) {
   return (
-    <article className="rounded-lg border border-slate-800 bg-slate-900/70 p-4 text-left shadow-sm transition hover:border-slate-700">
+    <article className="rounded-lg border border-slate-800 bg-slate-900/70 p-4 text-center shadow-sm transition hover:border-slate-700">
       <h3 className="text-lg font-semibold text-white">{contest.title}</h3>
 
       <p className="mt-3 text-sm text-slate-300">
@@ -17,7 +17,7 @@ function ContestCard({ contest }: { contest: Contest }) {
         href={contest.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-4 inline-flex rounded-md bg-amber-400 px-3 py-2 text-sm font-medium text-slate-950 transition hover:bg-amber-300"
+        className="mx-auto mt-4 inline-flex rounded-md bg-amber-400 px-3 py-2 text-sm font-medium text-slate-950 transition hover:bg-amber-300"
       >
         Open Contest
       </a>
