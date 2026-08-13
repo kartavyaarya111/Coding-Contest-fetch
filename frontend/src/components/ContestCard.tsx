@@ -1,5 +1,19 @@
 import type { Contest } from "../types/contest";
 
+function formatDuration(duration: number) {
+  const totalMinutes = Math.floor( duration / 60);
+  const hours = Math.floor((totalMinutes % (24*60))/60);
+  const days = Math.floor(totalMinutes / (24*60));
+  const minutes = totalMinutes % 60;
+  const parts: string[] = [];
+
+  if(days>0)  parts.push(`${days}d`);
+  if(hours>0) parts.push(`${hours}h`);
+  if(minutes>0) parts.push(`${minutes}m`);
+
+  return parts.length ? parts.join(" ") : "0m";
+}
+
 function ContestCard({ contest }: { contest: Contest }) {
   return (
     <article className="rounded-lg border border-slate-800 bg-slate-900/70 p-4 text-center shadow-sm transition hover:border-slate-700">
@@ -10,7 +24,7 @@ function ContestCard({ contest }: { contest: Contest }) {
       </p>
 
       <p className="mt-1 text-sm text-slate-300">
-        Duration: {contest.duration / 3600} Hours
+        Duration: {formatDuration(contest.duration)}
       </p>
 
       <a
