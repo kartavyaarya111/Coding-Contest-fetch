@@ -24,7 +24,7 @@ function ContestCard({ contest }: { contest: Contest }) {
       </p>
 
       <p className="mt-1 text-sm text-slate-300">
-        Duration: {formatDuration(contest.duration)}
+        Duration:  {contest.duration === null ? "-" : formatDuration(contest.duration)}
       </p>
 
       <a

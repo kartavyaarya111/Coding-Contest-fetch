@@ -31,4 +31,9 @@ export const platforms: Platform[] = [
     name: "HackerEarth",
     description: "Coding contests, hackathons, and hiring challenges",
   },
+  {
+    id: "atcoder",
+    name: "AtCoder",
+    description: "Algorithmic programming contests, including Beginner, Regular, Grand, and Heuristic contest series",
+  },
 ];
