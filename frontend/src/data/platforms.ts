@@ -36,4 +36,9 @@ export const platforms: Platform[] = [
     name: "AtCoder",
     description: "Algorithmic programming contests, including Beginner, Regular, Grand, and Heuristic contest series",
   },
+  {
+    id: "naukri",
+    name: "Naukri",
+    description: "Weekly and beginner-friendly coding contests on Code360, some linked to hiring drives",
+  },
 ];
