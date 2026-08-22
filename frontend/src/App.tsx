@@ -3,9 +3,7 @@ import HomePage from "./pages/HomePage";
 import PlatformPage from "./pages/PlatformPage";
 
 function App() {
-  const [selectedPlatformId, setSelectedPlatformId] = useState<string | null>(
-    null
-  );
+  const [selectedPlatformId, setSelectedPlatformId] = useState<string | null>(null);
 
   if (selectedPlatformId) {
     return (
