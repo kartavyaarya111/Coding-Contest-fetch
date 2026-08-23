@@ -6,6 +6,7 @@ const { getHackerRankContests } = require("../services/hackerrankService");
 const { getGfgContests } = require("../services/gfgService");
 const { getHackerEarthContests } = require("../services/hackerearthService");
 const { getAtcoderContests } = require("../services/atcoderService");
+const { getNaukriContests } = require("../services/naukriService");
 const router = express.Router();
 
 const handleRequest = (service) => async (req,res) => {
@@ -34,5 +35,7 @@ router.get("/gfg", handleRequest(getGfgContests));
 router.get("/hackerearth", handleRequest(getHackerEarthContests));
 
 router.get("/atcoder", handleRequest(getAtcoderContests));
+
+router.get("/naukri", handleRequest(getNaukriContests));
 
 module.exports = router;
