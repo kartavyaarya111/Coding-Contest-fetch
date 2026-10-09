@@ -4,17 +4,17 @@ export const platforms: Platform[] = [
   {
     id: "leetcode",
     name: "LeetCode",
-    description: "Weekly and biweekly coding contests",
+    description: "Weekly and biweekly algorithmic contests",
   },
   {
     id: "codeforces",
     name: "Codeforces",
-    description: "Competitive programming rounds",
+    description: "Div 1/2/3/4 rounds and educational rounds for all skill levels",
   },
   {
     id: "codechef",
     name: "CodeChef",
-    description: "Starters and long-form contests",
+    description: "Starters (weekly) and long-format monthly challenges",
   },
   {
     id: "hackerrank",
@@ -24,7 +24,7 @@ export const platforms: Platform[] = [
   {
     id: "gfg",
     name: "GeeksforGeeks",
-    description: "Standalone coding contests and Weekly Coding Contest series on GeeksforGeeks",
+    description: "Standalone coding contests and the Weekly Coding Contest series",
   },
   {
     id: "hackerearth",
@@ -34,6 +34,11 @@ export const platforms: Platform[] = [
   {
     id: "atcoder",
     name: "AtCoder",
-    description: "Algorithmic programming contests, including Beginner, Regular, Grand, and Heuristic contest series",
+    description: "Beginner, Regular, Grand, and Heuristic contest series",
+  },
+  {
+    id: "naukri",
+    name: "Naukri",
+    description: "Weekly and beginner-friendly coding contests on Code360, some linked to hiring drives",
   },
 ];
